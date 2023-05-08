@@ -16,6 +16,8 @@ bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <body>
 <div class="container">
     <button class="btn btn-primary my-5"><a href="connect.html" class="text-light">Add user</a></button>
+ <a href="pdf.php" class="btn btn-dark mb-3">To pdf</a>
+  <a href="excel.php" class="btn btn-dark mb-3">To excel</a>
 </div>
 <table class="table">
   <thead>
@@ -23,7 +25,7 @@ bootstrap@4.0.0/dist/css/bootstrap.min.css">
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
+    
  <th scope="col">Gender</th>
  <th scope="col">Operations</th>
 
@@ -38,13 +40,12 @@ if($result){
  $id=$row['id'];
 $fname=$row['fname'];
 $email=$row['email'];
-$password=$row['password'];
 $gender=$row['gender'];
 echo '<tr>
   <th scope="row">'.$id.'</th>
   <td>'.$fname.'</td>
   <td>'.$email.'</td>
-  <td>'.$password.'</td>
+  
   <td>'.$gender.'</td>
    <td>
 <button class="btn btn-primary"><a href="Update.php? updateid='.$id.' " class="text-light">Update</a></button>
